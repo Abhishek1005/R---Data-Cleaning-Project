@@ -1,6 +1,6 @@
 Peer-graded Assignment: Getting and Cleaning Data Course Project
 
-1) CodeBook.md - The code book that describes the variables, data, and the transformations.
+1) CodeBook.txt - The code book that describes the variables, data, and the transformations.
 
 2) run_analysis.R performs the 5 questions in the course instructions
 A) Merges the training and the test sets to create one data set.
