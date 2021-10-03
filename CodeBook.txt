@@ -1,0 +1,25 @@
+run_analysis.R performs the 5 questions in the course instructions
+
+1) Merges the training and the test sets to create one data set
+X - merging x_train and x_test using rbind() function
+Y - merging y_train and y_test using rbind() function
+subject - merging subject_train and subject_test using rbind() function
+merged - merging Subject, Y and X using cbind() function
+
+2) Extracts only the measurements on the mean and standard deviation for each measurement
+mean_sd_data - selecting only columns subject, code and the measurements on the mean and standard deviation (std) for each measurement from merged.
+
+3) Uses descriptive activity names to name the activities in the data set
+Code column of the mean_sd_data replaced with corresponding activity taken from second column of the activities variable
+
+4) Appropriately labels the data set with descriptive variable names
+Code column in mean_sd_data renamed into activities
+Acc in column’s name replaced by Accelerometer
+Gyro in column’s name replaced by Gyroscope
+BodyBody in column’s name replaced by Body
+Mag in column’s name replaced by Magnitude
+Columns starting with character f replaced by Frequency
+Columns starting with character t replaced by Time
+
+5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+Final is created by grouping by subject and activity followed by summarizing mean_sd_data taking the means of each variable.
